@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar .logo a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navbar .nav-links li {
+    font-size: 1rem;
+  }
+  
+  .navbar .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links li a:hover {
+    color: #FF4B4B;
+  }
+  
+  .homepage {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .homepage .tagline {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .image-section {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    gap: 1rem;
+  }
+  
+  .image-wrapper {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .disaster-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: #FF4B4B;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .disaster-button:hover {
+    background-color: #E63E3E;
+  }
+  
