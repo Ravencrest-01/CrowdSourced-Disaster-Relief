@@ -51,6 +51,8 @@ const ReportPage = () => {
         .catch((error) => console.error("Error:", error));
     };
 
+    const isAnyFormChecked = Object.values(checkedForms).some((isChecked) => isChecked);
+
     return (
         <div className="report-page">
             <div className="sidebar">
@@ -82,6 +84,7 @@ const ReportPage = () => {
                     Resources
                 </label>
             </div>
+            {isAnyFormChecked && (
             <form className="form-container" onSubmit={handleSubmit}>
                 {checkedForms.disaster && (
                     <div className="form-section">
@@ -234,7 +237,8 @@ const ReportPage = () => {
                     </div>
                 )}
                 <button type="submit">Submit</button>
-            </form>          
+            </form>
+            )}         
         </div>
     );
 
