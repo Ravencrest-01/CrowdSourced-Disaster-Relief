@@ -17,7 +17,7 @@ const HomePage = () => {
             </div>
             <div className="right-wing">
                 <ImageWrapper src="/images/3.jpg" alt="Flood India" />
-                <ImageWrapper src="/images/4.jpg" alt="Eartquake Aftermath" />
+                <ImageWrapper src="/images/4.jpg" alt="Earthquake Aftermath" />
             </div>
         </div>
     );

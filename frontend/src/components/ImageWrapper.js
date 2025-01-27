@@ -5,7 +5,7 @@ import "../styles/ImageWrapper.css"
 const ImageWrapper = ({ src, alt}) => {
     return (
         <div className="image-wrapper">
-            <img src={src} alt={alt} />
+            <img src={src} alt={alt} title={alt}/>
         </div>
     );
 };
