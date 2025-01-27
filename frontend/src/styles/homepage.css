@@ -1,0 +1,46 @@
+.homepage{
+    display: flex;
+    justify-content: center;
+    background-color: #c1ddfb;
+    height: 100vh;
+}
+
+.left-wing, .right-wing, .home-content{
+    padding: 0px 10px;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    margin: 10rem 0rem;
+}
+
+.home-content .Logo{
+    font-size: 4rem;
+}
+
+.header{
+    padding: 0px;
+    margin: 0px;
+}
+
+.tagline{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.disaster-button{
+    border-radius: 50px;
+    border-style: none;
+    background-color: #0A4076;
+    color: white;
+    font-size: 22px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.disaster-button:hover{
+    background-color: #66b0ff;
+    color: #0A4076;
+    /* border: solid 1px black; */
+}

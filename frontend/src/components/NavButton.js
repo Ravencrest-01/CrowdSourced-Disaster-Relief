@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-// import "./NavButton.css";
+import "../styles/NavButton.css";
 
 const Navbutton = ({ to, label}) => {
     return (

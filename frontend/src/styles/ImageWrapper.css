@@ -1,0 +1,16 @@
+.image-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 13vw;
+    background-color: #f5f5f5;
+    border-radius: 200px;
+    overflow: hidden;
+    position: relative;
+    margin: 25px;
+}
+
+.left-wing, .right-wing{
+    display: flex;
+}

@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar .Logo {
+    font-size: 3rem;
+  }
+
+ .navbar .Logo a{
+    cursor: default !important;
+ }
+  
+  .navbar ul{
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+  }

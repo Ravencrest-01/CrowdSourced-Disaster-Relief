@@ -4,17 +4,28 @@ body {
     background-color: #F5F5F5;
     color: #333;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+   }
+
+   a:visited,
+   a:active,
+   a:hover,
+   a:focus {
+     text-decoration: none; /* Removes underline in all states */
+     color: inherit; /* Prevents color changes in all states */
+   }
+
+   .homepage{
+    text-align: center;
+    padding: 0rem 1rem;
+    padding-top: 70px;
+   }
+
   
-  /* .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar .logo {
+ /* .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
   }
@@ -92,3 +103,4 @@ body {
     background-color: #E63E3E;
   }
    */
+

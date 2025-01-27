@@ -1,0 +1,42 @@
+/* .nav-button{
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 18px 45px 0px 18px;
+    background-color: #FF4B4B;
+    color: white;
+    transition: background-color 0.3s;
+}
+.nav-button:hover,
+.nav-button:focus,
+.nav-button:active{
+    background-color: #fcbcc2;
+    color: #FF4B4B;
+    cursor: pointer;
+} */
+
+.nav-button{
+    color: white;
+}
+
+.nav-link {
+    display: inline-block; /* Ensures the link behaves like a button */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2.1rem 1rem 1.4rem;
+    font-size: 1.25rem;
+    border-radius: 18px 45px 0px 18px;
+    background-color: #FF4B4B;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+    background-color: #fdb3ba;
+    color: #FF4B4B;
+    cursor: pointer;
+}
