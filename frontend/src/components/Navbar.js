@@ -1,16 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import NavButton from "./NavButton";
 
 
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <div className="Logo"><Link to="/"><span style={{ color: '#0A4076'}}>Beacon</span><span style={{ color: '#FF4B4B'}}>Grid</span></Link></div>
+            <div className="logo">
+                <Link to="/"><span style= {{ color:"##0A4076" }}>Beacon</span><span style={{ color:"##FC5162"}}>Grid</span></Link>
+            </div>
             <ul className="nav-links">
-                <li> <Link to="/community-boards">Community Boards</Link> </li>
-                <li> <Link to="/report">Report</Link> </li>
-                <li> <Link to="/resources">Resources</Link> </li>
-                <li> <Link to="/volunteer">Volunteer</Link> </li>
+                <NavButton to="/community-boards" label="Community Board" />
+                <NavButton to="/report" label="Report" />
+                <NavButton to="/resources" label="Resources" />
+                <NavButton to="/volunteer" label="Volunteer" />
             </ul>
         </nav>
     );
