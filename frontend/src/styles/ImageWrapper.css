@@ -8,9 +8,23 @@
     border-radius: 200px;
     overflow: hidden;
     position: relative;
-    margin: 25px;
+    margin: 20px 30px;
 }
 
 .left-wing, .right-wing{
     display: flex;
+}
+
+.image-wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.left-wing .image-wrapper:nth-child(1), .right-wing .image-wrapper:nth-child(1){
+    margin-top: -20px;
+}
+
+.left-wing .image-wrapper:nth-child(2), .right-wing .image-wrapper:nth-child(2){
+    margin-top: 80px;
 }
