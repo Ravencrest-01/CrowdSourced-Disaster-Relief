@@ -1,0 +1,51 @@
+.report-page {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20%;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form-container {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto; /* Makes the form-container scrollable */
+    background-color: #ffffff;
+}
+
+.form-section {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-section:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
