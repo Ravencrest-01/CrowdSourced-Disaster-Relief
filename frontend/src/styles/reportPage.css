@@ -2,6 +2,7 @@
     display: flex;
     height: 100vh;
     background-color: #c1ddfb;
+    border-top: 1px solid #000000;
 }
 
 .sidebar {
@@ -19,11 +20,103 @@
     cursor: pointer;
 }
 
+.sidebar {
+    width: 20%;
+    padding: 1rem;
+    background-color: #fbc1c7;
+    border-right: 1px solid #000000;
+    /* border-top: 1px solid #000000; */
+}
+
+.checkbox-wrapper-43 {
+    margin-bottom: 1rem;
+}
+
+.checkbox-wrapper-43 span {
+    font-weight: bolder;
+}
+
+.checkbox-wrapper-43 input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+}
+
+.checkbox-wrapper-43 label {
+    display: inline-block;
+}
+
+.checkbox-wrapper-43 .check {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    width: 24px; /* Bigger checkbox */
+    height: 24px; /* Bigger checkbox */
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-43 .check:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 75, 75, 0.03);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.checkbox-wrapper-43 .check svg {
+    position: relative;
+    z-index: 1;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #FF4B4B; /* Red border */
+    stroke-width: 2;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+}
+.checkbox-wrapper-43 .check svg path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 0;
+}
+.checkbox-wrapper-43 .check svg polyline {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 66;
+}
+.checkbox-wrapper-43 .check:hover:before {
+    opacity: 1;
+}
+.checkbox-wrapper-43 .check:hover svg {
+    stroke: #FF4B4B; /* Red border on hover */
+}
+.checkbox-wrapper-43 input[type="checkbox"]:checked + .check svg {
+    stroke: #FF4B4B; /* Red tick */
+}
+.checkbox-wrapper-43 input[type="checkbox"]:checked + .check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+}
+.checkbox-wrapper-43 input[type="checkbox"]:checked + .check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+}
+
+.checkbox-wrapper-43 span {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+}
+
 .form-container {
     flex: 1;
     padding: 1rem;
     overflow-y: auto; /* Makes the form-container scrollable */
     background-color: #b2d6fd;
+    /* border-top: 1px solid #000000; */
 }
 
 .form-section {
@@ -50,4 +143,10 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+
+.form-section {
+    display: flex;
+    flex-direction: column;
 }
