@@ -6,33 +6,33 @@ import ReportPage from "./components/ReportPage";
 import ResourcePage from "./components/ResourcePage";
 import VolunteerPage from "./components/VolunteerPage";
 import CommunityBoards from "./components/CommunityBoardsPage";
-import Loader from "./components/Loader";
+// import Loader from "./components/Loader";
 
 const App = () => {
 
-    const [isLoading, setIsLoading] = useState(true);
+    // const [isLoading, setIsLoading] = useState(true);
     
-    useEffect(()=>{
-        const images = document.querySelectorAll("img");
-        const promises = Array.from(images).map((img) => {
-            return new Promise((resolve)=> {
-                if(img.complete){
-                    resolve();
-                } else {
-                    img.onload = resolve;
-                    img.onerror = resolve;
-                }
-            });
-        });
+    // useEffect(()=>{
+    //     const images = document.querySelectorAll("img");
+    //     const promises = Array.from(images).map((img) => {
+    //         return new Promise((resolve)=> {
+    //             if(img.complete){
+    //                 resolve();
+    //             } else {
+    //                 img.onload = resolve;
+    //                 img.onerror = resolve;
+    //             }
+    //         });
+    //     });
 
-        Promise.all(promises).then(() => {
-            setIsLoading(false);
-        });
-    }, []);
+    //     Promise.all(promises).then(() => {
+    //         setIsLoading(false);
+    //     });
+    // }, []);
 
-    if(isLoading){
-        return <Loader />;
-    }
+    // if(isLoading){
+    //     return <Loader />;
+    // }
 
     return (
         <Router>
