@@ -21,6 +21,14 @@ const ReportPage = () => {
         localStorage.setItem("checkedForms", JSON.stringify(checkedForms));
     }, [checkedForms]);
 
+    useEffect(() => {
+        const logTimeout = setTimeout(() => {
+            console.log("Current Form Data:", formData);
+        }, 2000); // Delay of 2 seconds
+
+        return () => clearTimeout(logTimeout);
+    }, [formData]);
+
     // useEffect(() => {
     //     localStorage.setItem("formData", JSON.stringify(formData));
     // }, [formData]);
@@ -32,7 +40,6 @@ const ReportPage = () => {
     };
 
     const handleInputChange = (formType, field, value) => {
-        console.log(`Form: ${formType}, Field: ${field}, Value: ${value}`);
         setFormData((prevData) => ({
             ...prevData,
             [formType]: {
@@ -40,17 +47,27 @@ const ReportPage = () => {
                 [field]: value,
             },
         }));
+
+        // setTimeout(() => {
+        //     console.log(`Form: ${formType}, Field: ${field}, Value: ${value}`);
+        // }, 2000);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Submitting Data",formData);
+
+        const selectedData = Object.keys(checkedForms).filter((key)=>checkedForms[key]).reduce((obj, key)=>{
+            obj[key] = formData[key];
+            return obj;
+        }, {});
+
+        console.log("Submitting Data",selectedData);
         fetch("/api/report", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(formData),
+            body: JSON.stringify(selectedData),
         })
 
         .then((response) => {
