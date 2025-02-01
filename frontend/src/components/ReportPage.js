@@ -11,29 +11,28 @@ const ReportPage = () => {
         };
     });
 
-    const [formData, setFormData] = useState(() => {
-        const savedFormData = localStorage.getItem("formData");
-        return savedFormData ? JSON.parse(savedFormData) : {
-            disaster: {},
-            shelters: {},
-            resources: {},
-        };
+    const [formData, setFormData] = useState({
+            disaster: { type: "", description: "", location: "", state: "", image: null },
+            shelters: { address: "", type: "", location: "", state: "", image: null },
+            resources: { address: "", type: "", location: "", state: "", image: null },
     });
 
     useEffect(() => {
         localStorage.setItem("checkedForms", JSON.stringify(checkedForms));
     }, [checkedForms]);
 
-    useEffect(() => {
-        localStorage.setItem("formData", JSON.stringify(formData));
-    }, [formData]);
+    // useEffect(() => {
+    //     localStorage.setItem("formData", JSON.stringify(formData));
+    // }, [formData]);
 
     const handleCheckboxChange = (e) => {
         const {name, checked} = e.target;
-        setCheckedForms({ ...checkedForms, [name]: checked});
+        // setCheckedForms({ ...checkedForms, [name]: checked});
+        setCheckedForms((prevData) => ({ ...prevData, [name]: checked}));
     };
 
     const handleInputChange = (formType, field, value) => {
+        console.log(`Form: ${formType}, Field: ${field}, Value: ${value}`);
         setFormData((prevData) => ({
             ...prevData,
             [formType]: {
