@@ -1,0 +1,30 @@
+.resource-page {
+    padding: 20px;
+    background-color: #c1ddfb;
+    min-height: calc(100vh - 90px);
+}
+
+.resource-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.resource-table th,
+.resource-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.resource-table th {
+    background-color: #0A4076;
+    color: white;
+}
+
+.resource-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
