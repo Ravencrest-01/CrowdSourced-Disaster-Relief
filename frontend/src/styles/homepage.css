@@ -1,12 +1,21 @@
 .homepage{
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #c1ddfb;
-    height: 100vh;
-    padding: 60px 0px;
+    /* height: calc(100vh - 90px); */
+    border-top: solid black 1px;
+    /* padding-top: 90px; */
+    overflow: hidden;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .left-wing, .right-wing, .home-content{
+    /* max-height: calc(100vh - 90px); */
     margin: 0px 10px;
 }
 
@@ -15,7 +24,7 @@
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
-    height: calc(100vh - 300px); /* Full height minus the navbar */
+    /* height: calc(100vh - 300px);  */
     margin:0px 30px;
 }
 
@@ -40,6 +49,7 @@
     color: white;
     font-size: 22px;
     padding: 10px 20px;
+    margin: 20px 0px 0px 0px;
     cursor: pointer;
     font-weight: bold;
 }

@@ -1,10 +1,18 @@
 .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Full width */
+    height: 90px; /* Adjust based on your navbar height */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem;
+    padding: 0rem 2rem;
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Keeps it on top */
   }
 
   .navbar .Logo {
