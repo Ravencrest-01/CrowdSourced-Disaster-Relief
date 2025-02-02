@@ -134,12 +134,17 @@ const ReportPage = () => {
                         onChange={(e) => handleInputChange(e, "shelter")}
                     />
                     <label>Images:</label>
-                    <input
-                        type="file"
-                        name="image"
-                        placeholder="Provide Images"
-                        onChange={(e) => handleInputChange(e, "shelter")}
-                    />
+                    <div className="file-input-container">
+                        <input
+                            type="file"
+                            id="shelter-image"
+                            name="image"
+                            onChange={(e) => handleInputChange(e, "shelter")}
+                        />
+                        <label htmlFor="shelter-image" className="custom-file-button">
+                            <img src="/images/upload-solid.svg" alt="Upload Icon" />
+                        </label>
+                    </div>
                     <button className="submit">Submit</button>
                 </form>
             </div>
