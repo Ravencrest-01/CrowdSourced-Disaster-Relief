@@ -1,9 +1,11 @@
 const express = require("express");
+const router = express.Router();
 const { createDisaster, getAllDisasters } = require("../controllers/disasterController");
 
-const router = express.Router();
+// Route to get all disasters
+router.get("/", getAllDisasters);
 
-router.post("/", createDisaster);  // This handles POST /api/disasters
-router.get("/", getAllDisasters);  // This handles GET /api/disasters
+// Route to create a new disaster
+router.post("/", createDisaster);
 
 module.exports = router;

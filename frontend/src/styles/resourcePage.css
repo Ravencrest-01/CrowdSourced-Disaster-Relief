@@ -1,30 +1,126 @@
+
+
+/* resourcePage.css */
 .resource-page {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: #c1ddfb;
-    min-height: calc(100vh - 90px);
-}
-
-.resource-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
+  }
+  
+  .resource-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .page-title {
+    text-align: center;
+    color: #21409a;
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .resource-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .resource-column {
+    background-color: white;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.resource-table th,
-.resource-table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.resource-table th {
-    background-color: #0A4076;
-    color: white;
-}
-
-.resource-table tbody tr:hover {
-    background-color: #f5f5f5;
-}
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .shelter-column {
+    border-top: 4px solid #21409a;
+  }
+  
+  .resources-column {
+    border-top: 4px solid #21409a;
+  }
+  
+  .column-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #21409a;
+    text-align: center;
+    border-bottom: 2px solid #e6f0ff;
+    padding-bottom: 10px;
+  }
+  
+  .resource-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .shelter-card {
+    border-left: 4px solid #21409a;
+  }
+  
+  .resource-item {
+    border-left: 4px solid #21409a;
+  }
+  
+  .resource-details p {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+  
+  .status {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+  }
+  
+  .status.open, .status.available {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status.full, .status.unavailable {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .status.limited {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .resource-location {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #6c757d;
+  }
+  
+  .no-data-message {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    padding: 20px 0;
+  }
+  
+  /* Make it responsive */
+  @media (max-width: 768px) {
+    .resource-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .resource-column {
+      margin-bottom: 20px;
+    }
+  }

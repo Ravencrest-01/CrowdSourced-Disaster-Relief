@@ -1,0 +1,145 @@
+/* volunteerPage.css */
+
+.volunteer-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #c1ddfb;
+  }
+  
+  .volunteer-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .volunteer-page-title {
+    text-align: center;
+    color: #21409a;
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+  
+  .volunteer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .volunteer-column {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .volunteer-donation-column {
+    border-top: 4px solid #21409a;
+  }
+  
+  .volunteer-list-column {
+    border-top: 4px solid #21409a;
+  }
+  
+  .volunteer-column-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #21409a;
+    text-align: center;
+    border-bottom: 2px solid #e6f0ff;
+    padding-bottom: 10px;
+  }
+  
+  .volunteer-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input Styles */
+  .volunteer-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d4d4d4;
+    border-radius: 50px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+                inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .volunteer-input:focus {
+    outline: none;
+    border: 1px solid #FF4B4B;
+  }
+  
+  /* Stripe CardElement Styles */
+  .card-element {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d4d4d4;
+    border-radius: 50px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+                inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Submit Button */
+  .volunteer-submit {
+    background-color: #FF4B4B;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 50%;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .volunteer-submit:hover {
+    background-color: #e14343;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 8px rgba(255, 75, 75, 0.5);
+  }
+  
+  /* Success & Error Messages */
+  .volunteer-success-message {
+    text-align: center;
+    color: green;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .volunteer-error-message {
+    text-align: center;
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  /* No Data Message */
+  .volunteer-no-data-message {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    padding: 20px 0;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .volunteer-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .volunteer-column {
+      margin-bottom: 20px;
+    }
+  }
+  

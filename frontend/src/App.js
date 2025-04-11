@@ -1,39 +1,18 @@
-import React, { useState, useEffect} from "react";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";
 import ReportPage from "./components/ReportPage";
 import ResourcePage from "./components/ResourcePage";
 import VolunteerPage from "./components/VolunteerPage";
 import CommunityBoards from "./components/CommunityBoardsPage";
-// import Loader from "./components/Loader";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+
+const stripePromise = loadStripe("pk_test_51RCVAgGLjppvE8XyRrhfy32fEhDBJN2XVdtCFISwjAjHyTyYefcjh86GTSxmyXSCxqGEbHTQSGHAVV8FHh0B3QbP00jXVgkU9R");
 
 const App = () => {
-
-    // const [isLoading, setIsLoading] = useState(true);
-    
-    // useEffect(()=>{
-    //     const images = document.querySelectorAll("img");
-    //     const promises = Array.from(images).map((img) => {
-    //         return new Promise((resolve)=> {
-    //             if(img.complete){
-    //                 resolve();
-    //             } else {
-    //                 img.onload = resolve;
-    //                 img.onerror = resolve;
-    //             }
-    //         });
-    //     });
-
-    //     Promise.all(promises).then(() => {
-    //         setIsLoading(false);
-    //     });
-    // }, []);
-
-    // if(isLoading){
-    //     return <Loader />;
-    // }
-
     return (
         <Router>
             <div className="app-container">
@@ -42,7 +21,14 @@ const App = () => {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/report" element={<ReportPage />} />
                     <Route path="/resources" element={<ResourcePage />} />
-                    <Route path="/volunteer" element={<VolunteerPage />} />
+                    <Route
+                        path="/volunteer"
+                        element={
+                            <Elements stripe={stripePromise}>
+                                <VolunteerPage />
+                            </Elements>
+                        }
+                    />
                     <Route path="/community-boards" element={<CommunityBoards />} />
                 </Routes>
             </div>
