@@ -4,7 +4,10 @@ import { Elements, CardElement, useStripe, useElements } from "@stripe/react-str
 import { createDonor, fetchDonors } from "../services/api";
 import "../styles/volunteerPage.css";
 
-const stripePromise = loadStripe("pk_test_51RCVAgGLjppvE8XyRrhfy32fEhDBJN2XVdtCFISwjAjHyTyYefcjh86GTSxmyXSCxqGEbHTQSGHAVV8FHh0B3QbP00jXVgkU9R");
+
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
+
+// const stripePromise = loadStripe("pk_test_51RCVAgGLjppvE8XyRrhfy32fEhDBJN2XVdtCFISwjAjHyTyYefcjh86GTSxmyXSCxqGEbHTQSGHAVV8FHh0B3QbP00jXVgkU9R");
 
 const DonationForm = ({ onDonationSuccess }) => {
   const [formData, setFormData] = useState({
@@ -57,6 +60,7 @@ const DonationForm = ({ onDonationSuccess }) => {
   };
 
   return (
+    
     <form onSubmit={handleSubmit}>
       <input
         className="volunteer-input"
@@ -136,7 +140,7 @@ const VolunteerPage = () => {
               donors.map((donor, index) => (
                 <div className="volunteer-card" key={index}>
                   <p><strong>Name:</strong> {donor.name}</p>
-                  <p><strong>Donation:</strong> ${donor.donationAmount}</p>
+                  <p><strong>Donation:</strong> ₹{donor.donationAmount}</p>
                 </div>
               ))
             )}
