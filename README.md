@@ -19,6 +19,8 @@ A **MERN stack application** designed to **help communities** efficiently **repo
 - **MongoDB** 🍃 - NoSQL database for storing reports.
 - **Mongoose** 🔗 - ODM for MongoDB.
 
+### **Payment Gateway**
+- For the payment gateway sandbox. I have used the sprite api as it provides free of cost payment gateway sandbox for developers.
 ---
 
 ## **💻 Running the Project Locally**
@@ -35,14 +37,16 @@ npm start    # Start the React development server
 ```bash
 cd backend
 npm install # Install dependencies
-npm run dev # Start backend using nodemon 
+npm run dev # Start backend using nodemon
+or
+npm start # if you have the default json file. 
 ```
 ---
 
 ### **3️⃣ Start the Database (MongoDB)**
 ```bash
 mongod -dbpath "your/path/for/database"
-mongod --dbpath "D:\Coding\CrowdSourced Disaster Relief\database" # What I used
+mongod --dbpath "D:\Coding\CrowdSourced Disaster Relief\database" # What I used. It has to be used only once.
 ```
 ---
 
